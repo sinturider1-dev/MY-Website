@@ -1,0 +1,377 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #0a0f2c, #000);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+
+
+#content {
+    padding-top: 40px;
+}
+
+
+
+/* Message */
+.msg {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Flower falling */
+.flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.flower {
+    position: absolute;
+    top: -30px;
+    font-size: 20px;
+    opacity: 0.5;              /* 🔹 transparency */
+    filter: blur(0.3px);       /* 🔹 soft look */
+    animation-name: fall-drift;
+    animation-timing-function: linear;
+}
+
+@keyframes fall-drift {
+    0% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    25%{transform: translate(-15px,25vh) rotate(90deg);
+    }
+50% {
+        transform: translate(15px, 50vh) rotate(180deg);
+    }
+    75% {
+        transform: translate(-10px, 75vh) rotate(270deg);
+    }
+    100% {
+        transform: translate(10px, 110vh) rotate(360deg);
+    }
+}
+
+
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(255,215,0,0.7);
+}
+.krishna {
+    width: 160px;
+    margin: 40px auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+.krishna img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.6);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    body {
+    background: radial-gradient(circle at top, #1a237e, #000);
+}
+
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;   /* mobile width */
+    min-height: 100vh;
+    background: linear-gradient(#050015, #000);
+    text-align: center;
+    padding: 20px;
+}
+img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+h1 {
+    font-size: 1.4rem;
+    color: white;
+}
+
+p {
+    font-size: 1rem;
+    color: #ccc;
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+.krishna img {
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px gold;
+    margin: 20px 0;
+
+    /* FLOAT + GLOW ANIMATION */
+    animation: floatGlow 4s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 0 20px gold;
+    }
+    50% {
+        transform: translateY(-20px); /* thoda upar */
+        box-shadow: 0 0 40px gold;   /* glow thoda zyada */
+    }
+    100% {
+        transform: translateY(0px);  /* wapas neeche */
+        box-shadow: 0 0 25px gold;   /* normal glow */
+    }
+}
+#musicBtn {
+    padding: 2px 5px;
+    font-size: 13px;
+    border: 0.10px solid gold;       /* Krishna theme border */
+    border-radius: 15px;
+    background: #10103b;           /* body background se match */
+    color: gold;                    /* golden text */
+    cursor: pointer;
+    box-shadow: 0 0 15px gold;
+    transition: all 0.3s ease;
+    margin: 15px auto 25px auto;   /* Krishna image se thoda gap */
+    display: block;                 /* center alignment */
+}
+#musicBtn:hover {
+    background: gold;
+    color: #0a0a23;
+    box-shadow: 0 0 30px gold;
+    transform: scale(1.05);
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#musicBtn {
+    animation: blink 1.5s infinite;
+}
+
+#text {
+    font-size: 14px;
+    color: #ffeaa7;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+    animation: glowFade 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowFade {
+    from {
+        text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+        opacity: 0.85;
+    }
+    to {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        opacity: 1;
+    }
+}
+
+.credit {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    font-style: italic;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    animation: creditFade 3s ease-in-out infinite alternate;
+}
+
+@keyframes creditFade {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #0a0f2c, #000);
+    color: #ffeaa7;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hidden { display: none; }
+
+#loading {
+    font-size: 24px;
+    color: #fff;
+    animation: blink 1s infinite
+}
+/* blink/fade animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+#krishnaImg {
+    width: 200px; /* apne hisab se adjust kar sakte ho */
+    margin-bottom: 20px;
+}
+
+#text {
+    font-size: 14px;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+#krishnaImg {
+    width: 200px; /* size adjust karo */
+    margin-bottom: 20px;
+    /* Glow effect */
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
+    border-radius: 15%; /* thoda rounded agar chahte ho */
+    animation: float 3s ease-in-out infinite; /* up-down animation */
+}
+
+/* Float animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.image-container {
+    position: relative; /* important, text absolute ho sake */
+    display: inline-block;
+}
+/* Happy New Year text */
+#happyText {
+    position: absolute;     /* image ke upar */
+    top: -12px;             /* upar adjust karo, negative value zyada upar */
+    left: 50%;              /* center horizontally */
+    transform: translateX(-50%);
+    color: gold;
+    font-size: 2rem;        /* size adjust karo */
+    text-shadow: 0 0 15px yellow; /* glow effect */
+    text-align: center;
+    white-space: nowrap;    /* line break na ho */
+}
+
+#finalMessage {
+    margin-top: 30px;
+    padding: 15px 20px;
+    max-width: 90%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+
+    opacity: 0;
+    animation: messageFade 2s ease forwards;
+    animation-delay: 2s; /* thoda late aaye */
+}
+
+@keyframes messageFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#finalMessage p {
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+}
+#secretTrigger {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 50;
+    display: none;
+}
+
+
+.flowerIcon {
+    font-size: 24px;
+}
+
+.secretText {
+    font-size: 0.6rem;
+    color: gold;
+    animation: blinkText 1.2s infinite;
+}
+
+@keyframes blinkText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.flowerIcon {
+    font-size: 20px;
+    animation: flowerBlink 1.2s infinite;
+}
+
+@keyframes flowerBlink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
